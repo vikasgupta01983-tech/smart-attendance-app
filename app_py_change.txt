@@ -1,0 +1,18 @@
+ONE SMALL EDIT in your existing app.py  (inside create_session())
+=================================================================
+
+FIND this block:
+
+            session_url = (
+                f"http://192.168.69.1:5000/"
+                f"mark-attendance/{session_id}"
+            )
+
+REPLACE it with:
+
+            # Use the address the teacher is actually connected to
+            # (or the BASE_URL environment variable if you set one).
+            base_url = os.environ.get("BASE_URL") or request.host_url.rstrip("/")
+            session_url = f"{base_url}/mark-attendance/{session_id}"
+
+Nothing else in app.py, database.py, templates or CSS needs to change.

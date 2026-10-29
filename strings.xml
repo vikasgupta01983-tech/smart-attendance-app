@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Student Attendance</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_scan">Scan QR</string>
+    <string name="btn_server">Server</string>
+</resources>
